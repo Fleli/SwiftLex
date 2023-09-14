@@ -43,3 +43,7 @@ Lexer generation by SwiftLex is a 7-step process. Steps 2-6 are done for each `T
 5       | `NFA`                     | `DFA`                     | The NFA is converted to a DFA (Subset construction)
 6       | `DFA`                     | `Table`                   | The DFA is converted to a table.
 7       | `[Table]`                 | `String`                  | Tables are used to generate a lexer. The lexer is written to a file.
+
+## Commit history
+
+Since SwiftLex did not start out as a package (but rather as a command-line tool), the commit history can be found in the now-deprecated [SwiftLex-Commits](https://github.com/Fleli/SwiftLex-Commits) repository. Future updates will come *here*, to the SwiftLex _package_.
