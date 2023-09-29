@@ -137,6 +137,8 @@ class Generator {
         
         tables.append(table)
         
+        print("Generated table \(table) for \(specification)")
+        
     }
     
     private func createFiles(_ fileName: String, _ content: String, _ printResult: Bool) {
