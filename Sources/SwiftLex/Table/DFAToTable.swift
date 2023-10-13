@@ -43,7 +43,7 @@ extension DFA {
                 
             }
             
-            print("Completed transition \(transition.oldState) -> \(transition.newState) @ \(transition.character)")
+            print("Completed transition \(transition.oldState.id) -> \(transition.newState.id) @ \(transition.character)")
             
         }
         

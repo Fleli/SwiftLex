@@ -8,6 +8,8 @@ class RegexLiteral: Regex {
         self.literal = literal
     }
     
-    func generateNFA() -> NFA { .nfaFrom(literal) }
+    func generateNFA() -> NFA {
+        return .nfaFrom(literal)
+    }
     
 }

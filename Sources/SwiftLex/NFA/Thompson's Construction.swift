@@ -7,6 +7,8 @@ extension NFA {
         
         entry.addTransition(to: accepting, at: literal)
         
+        print("Thompson's construction: literal")
+        
         return NFA(entry: entry, accepting: accepting)
         
     }
@@ -24,6 +26,8 @@ extension NFA {
         arg1.accepting.addTransition(to: accepting, at: nil)
         arg2.accepting.addTransition(to: accepting, at: nil)
         
+        print("Thompson's construction: |")
+        
         return nfa
         
     }
@@ -38,6 +42,8 @@ extension NFA {
         entry.addTransition(to: arg1.entry, at: nil)
         arg1.accepting.addTransition(to: arg2.entry, at: nil)
         arg2.accepting.addTransition(to: accepting, at: nil)
+        
+        print("Thompson's construction: &")
         
         return nfa
         
@@ -55,6 +61,8 @@ extension NFA {
         
         arg.accepting.addTransition(to: accepting, at: nil)
         arg.accepting.addTransition(to: arg.entry, at: nil)
+        
+        print("Thompson's construction: *")
         
         return nfa
         
