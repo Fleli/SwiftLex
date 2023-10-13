@@ -128,9 +128,11 @@ class Generator {
         
         let input = specification.regex
         
-        let table = try input
-            .generateTokens()
-            .parse()
+        let regex = try input.generateTokens().parse()
+        
+        print("Regex: \(regex)")
+        
+        let table = regex
             .generateNFA()
             .generateDFA()
             .generateTable(with: specification)

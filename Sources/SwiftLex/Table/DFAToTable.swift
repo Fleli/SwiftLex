@@ -43,6 +43,8 @@ extension DFA {
                 
             }
             
+            print("Completed transition \(transition.oldState) -> \(transition.newState) @ \(transition.character)")
+            
         }
         
     }
