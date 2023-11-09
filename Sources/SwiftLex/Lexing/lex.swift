@@ -20,6 +20,9 @@ extension String {
             case "\\" where (self[index + 1] == "n"):
                 token = Token(false, "\n")
                 index += 1
+            case "\\" where (self[index + 1] == "t"):
+                token = Token(false, "\t")
+                index += 1
             case "\\" where (self[index + 1] != nil):
                 token = Token(false, self[index + 1]!)
                 index += 1
