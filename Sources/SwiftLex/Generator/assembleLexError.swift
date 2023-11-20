@@ -5,7 +5,7 @@ extension Generator {
         return """
         enum LexError: Error {
         
-            case invalidCharacter(_ char: Character)
+            case invalidCharacter(_ char: Character, _ tokens: [Token])
             
         }
         """
