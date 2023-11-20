@@ -39,6 +39,10 @@ extension String {
             
         }
         
+        for t in tokens.array {
+            print(t.description)
+        }
+        
         return tokens
         
     }

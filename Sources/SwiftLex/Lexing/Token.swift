@@ -1,7 +1,11 @@
-struct Token: Equatable {
+struct Token: Equatable, CustomStringConvertible {
     
     var isOperator: Bool
     var content: Character
+    
+    var description: String {
+        return "\(isOperator ? "[operator]" : "[standard]") content={\(content)}"
+    }
     
     init(_ isOperator: Bool, _ content: Character) {
         self.isOperator = isOperator
